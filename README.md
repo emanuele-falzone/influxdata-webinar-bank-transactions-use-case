@@ -20,7 +20,7 @@ Extend telegraf in order to decrypt every transaction and upload the correspondi
 Start the `docker-compose.yml`
 
 ```
-docker-compose up
+docker-compose up -d
 ```
 
 and wait 2 minutes.
@@ -34,5 +34,10 @@ A sample `decoder` written in python is provided.
 In order to help John, you should:
 
 - Create an extension of [Telegraf](https://github.com/influxdata/telegraf), with a Telegraf parser plugin that, given an encrypted message, is able to decrypt it with a given private key, and convert it into a telegraf metric. I suggest you to make the new version available as Docker Image.
-- Extend the file `docker-compose.yml` with the extended version of Telegraf and InfluxDB.
+- Complete the file `docker-compose-influx.yml` with the extended version of Telegraf and InfluxDB.
+- Run your solution.
+```
+docker-compose -f docker-compose-influx.yml up -d
+```
 
+Once you have your solution working, open a Pull Request 😁
