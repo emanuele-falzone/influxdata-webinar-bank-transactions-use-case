@@ -17,6 +17,8 @@ Extend telegraf in order to decrypt every transaction and upload the correspondi
 
 ![](./architecture.png)
 
+The starting point of each arrow indicates the component that initializes the interaction, i.e. the component that sends (asks for) the data.
+
 Start the `docker-compose.yml`
 
 ```
